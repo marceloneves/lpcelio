@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aula Gratuita: Reforma Tributária para Contadores | Célio Gomes</title>
+<meta name="description" content="Entre 50% e 60% dos contadores não sabem o mínimo sobre a Reforma Tributária. Participe da aula ao vivo e gratuita com um contador que vive a reforma na prática há mais de um ano.">
+<meta name="theme-color" content="#0b0c0f">
+<meta property="og:title" content="Aula Gratuita: Reforma Tributária para Contadores">
+<meta property="og:description" content="O contador que não entender a Reforma Tributária vai perder cliente e receita. Aula ao vivo, gratuita, feita por contador — não por advogado.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<!-- PENDENTE: substituir por logo/identidade oficial PPSE (ppse.com.br) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Aula Gratuita: Reforma Tributária para Contadores",
+  "description": "Aula ao vivo e gratuita sobre a Reforma Tributária aplicada à rotina do escritório de contabilidade.",
+  "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "startDate": "2026-08-27T19:00:00-03:00",
+  "location": { "@type": "VirtualLocation", "url": "https://ppse.com.br" },
+  "organizer": { "@type": "Organization", "name": "PPSE Contabilidade Digital", "url": "https://ppse.com.br" },
+  "performer": { "@type": "Person", "name": "Célio Gomes" },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "BRL",
+    "availability": "https://schema.org/InStock",
+    "url": "https://ppse.com.br"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#hero" class="logo">
+      <img src="img/logo-ppse.jpg" alt="PPSE Contabilidade Digital" class="logo__img">
+      <span class="logo__text"><strong>Contabilidade Digital</strong></span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <ul class="nav__list">
+        <li><a href="#cenario">O cenário</a></li>
+        <li><a href="#live">A aula</a></li>
+        <li><a href="#casos">Casos reais</a></li>
+        <li><a href="#celio">Quem ensina</a></li>
+        <li><a href="#faq">Dúvidas</a></li>
+      </ul>
+      <a href="#inscricao" class="btn btn--accent nav__cta">Garantir minha vaga</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="hero">
+  <div class="hero__glow"></div>
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <span class="badge"><i class="dot"></i> Aula ao vivo e <strong>100% gratuita</strong> · para contadores de todo o Brasil</span>
+
+      <h1>Entre <span class="grad">50% e 60% dos contadores</span> não sabem o mínimo sobre a Reforma Tributária. E o prazo já começou a correr.</h1>
+
+      <p class="lead">
+        A CBS entra em vigor e não tem volta. O contador é o primeiro que precisa saber —
+        porque é ele quem orienta o cliente. Nesta aula ao vivo você vai ver a Reforma
+        <strong>explicada por um contador</strong>, com casos reais de escritório, e não só teoria de lei.
+      </p>
+
+      <div class="countdown" id="countdown" aria-live="polite">
+        <div class="countdown__item"><strong data-cd="d">00</strong><span>dias</span></div>
+        <div class="countdown__item"><strong data-cd="h">00</strong><span>horas</span></div>
+        <div class="countdown__item"><strong data-cd="m">00</strong><span>min</span></div>
+        <div class="countdown__item"><strong data-cd="s">00</strong><span>seg</span></div>
+      </div>
+      <!-- PENDENTE: confirmar data/hora com Brian — configurar em js/main.js (LIVE_AT) -->
+      <p class="hero__when" id="liveWhen">Quarta-feira, 27 de agosto · 19h (horário de Brasília) · ao vivo e online</p>
+
+      <div class="hero__actions">
+        <a href="#inscricao" class="btn btn--accent btn--lg">Quero participar da aula gratuita</a>
+        <a href="#live" class="btn btn--ghost btn--lg">Ver o que será ensinado</a>
+      </div>
+
+      <ul class="hero__points">
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Aula gratuita, sem cobrança</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Feita por contador, não por advogado</li>
+        <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Casos reais de escritório</li>
+      </ul>
+    </div>
+
+    <div class="hero__panel">
+      <!-- PENDENTE: substituir por vídeo curto do Célio apresentando a live -->
+      <div class="video-card" id="videoCard">
+        <div class="video-card__thumb">
+          <span class="video-card__play" aria-hidden="true"></span>
+          <span class="video-card__tag">Vídeo · 1 min</span>
+          <p>Célio Gomes explica por que esta aula existe</p>
+        </div>
+        <div class="video-card__foot">
+          <span class="avatar">CG</span>
+          <div>
+            <strong>Célio Gomes</strong>
+            <span>Contador · PPSE Contabilidade Digital</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-float card-float--stat">
+        <span class="card-float__label">Contadores sem conhecimento mínimo</span>
+        <strong class="card-float__value">60%</strong>
+        <div class="progress"><i style="--w:60%"></i></div>
+        <small>Fonte: levantamentos do setor citados na imprensa especializada, 2026.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CENÁRIO ========== -->
+<section class="section section--dark" id="cenario">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">O cenário</span>
+      <h2>O mercado apelidou de “negacionismo contábil”. Os números explicam por quê.</h2>
+      <p>Não é opinião. É o retrato de quem deveria estar liderando a transição e ainda não abriu a legislação.</p>
+    </div>
+
+    <div class="grid grid--3 numbers">
+      <div class="number"><strong>60%</strong><span>dos contadores não têm nem o conhecimento mínimo sobre a Reforma Tributária</span></div>
+      <div class="number"><strong>40%</strong><span>têm apenas conhecimento raso — e menos da metade desses chega ao nível intermediário</span></div>
+      <div class="number"><strong>1º</strong><span>o contador é o primeiro a ser cobrado pelo cliente quando a regra muda</span></div>
+    </div>
+
+    <div class="warn-box">
+      <h3>Por que não adianta esperar passar</h3>
+      <p>
+        A lei já existe e a CBS entra de fato em vigor. Mesmo uma mudança de governo não ressuscita
+        tributo extinto nem desmonta a sistemática já implantada — no máximo desacelera a transição.
+        Quem ficar parado vai aprender no prejuízo: cliente pagando imposto errado, crédito não aproveitado,
+        crédito aproveitado indevidamente, multa e notificação.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== A LIVE ========== -->
+<section class="section" id="live">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">A aula gratuita</span>
+      <h2>O que você leva desta aula ao vivo</h2>
+      <p>Uma aula direta ao ponto, com a Reforma Tributária traduzida para a rotina de quem toca escritório.</p>
+    </div>
+
+    <div class="grid grid--3">
+      <article class="card">
+        <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-8 0v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg></div>
+        <h3>Reforma explicada por contador</h3>
+        <p>Hoje quem domina o assunto são os advogados — e eles falam de lei. Aqui você ouve como a regra se aplica dentro de um escritório de contabilidade, no dia a dia.</p>
+      </article>
+
+      <article class="card">
+        <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M14 2H6v20h12V8zM14 2v6h6M9 13h6M9 17h4"/></svg></div>
+        <h3>Exemplos práticos, com o artigo na tela</h3>
+        <p>Cada afirmação vem com o dispositivo legal para você conferir e usar na conversa com o cliente. Nada de “ouvi dizer”.</p>
+      </article>
+
+      <article class="card">
+        <div class="card__icon"><svg viewBox="0 0 24 24"><path d="M4 19V5m0 14h16M8 15l3-4 3 3 5-7"/></svg></div>
+        <h3>Onde está a receita nova</h3>
+        <p>A reforma abre frentes de faturamento para o escritório: revisão de contrato social, cadastro de produtos, reposicionamento do cliente. Você sai sabendo onde olhar.</p>
+      </article>
+    </div>
+
+    <div class="topics">
+      <h3>Temas que entram na aula</h3>
+      <ul class="check-list check-list--cols">
+        <li>O que muda de fato com CBS e IBS na rotina do escritório</li>
+        <li>Declaração assistida: por que ela <em>não</em> acaba com o trabalho do contador</li>
+        <li>Crédito presumido: quando existe e como lançar</li>
+        <li>Imposto seletivo e a régua do “faz mal à saúde”</li>
+        <li>Cruzamento de Pix e nota fiscal: o risco que já está batendo na porta</li>
+        <li>O que precisa ser revisado no cadastro de produtos antes de virar o ano</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CASOS REAIS ========== -->
+<section class="section section--alt" id="casos">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Casos reais</span>
+      <h2>Três situações que já aconteceram — e que seu cliente vai viver</h2>
+      <p>São exemplos tirados da operação real de um escritório, não de apostila.</p>
+    </div>
+
+    <div class="grid grid--3">
+      <article class="case">
+        <span class="case__tag">Cruzamento de Pix</span>
+        <h3>R$ 10 mil na conta e uma notificação da Receita</h3>
+        <p>
+          Um sócio transferiu R$ 10.000 da PJ dele para a conta da empresa, só para cobrir despesas.
+          O Fisco cruzou o Pix, não achou nota contra aquele CNPJ e mandou a intimação: emita a nota ou explique.
+        </p>
+        <p class="case__lesson"><strong>A lição:</strong> quem movimenta por Pix sem nota já está exposto. E o contador precisa saber justificar.</p>
+      </article>
+
+      <article class="case">
+        <span class="case__tag">Imposto seletivo</span>
+        <h3>Um suco pode ter três tributações diferentes</h3>
+        <p>
+          Suco zero açúcar, suco com açúcar e suco de laranja feito na hora na lanchonete: mesma prateleira,
+          regimes distintos. A diferença entre pagar mais e pagar menos pode estar numa descrição de cadastro.
+        </p>
+        <p class="case__lesson"><strong>A lição:</strong> revisar cadastro de produtos deixou de ser detalhe. Virou economia — e serviço faturável.</p>
+      </article>
+
+      <article class="case">
+        <span class="case__tag">Crédito presumido</span>
+        <h3>A loja de carros que perde crédito sem saber</h3>
+        <p>
+          Revenda que compra veículo de pessoa física tem crédito presumido. Só que o lançamento é manual
+          e cheio de regra. Não sabe, não lança. Não lança, o cliente paga imposto a mais.
+        </p>
+        <p class="case__lesson"><strong>A lição:</strong> a declaração assistida não vai fazer isso por você. Nunca vai.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== OPORTUNIDADES ========== -->
+<section class="section" id="oportunidades">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Do outro lado</span>
+      <h2>A mesma reforma que quebra escritório despreparado abre receita para quem estudou</h2>
+      <p>Enquanto a maioria trata como problema, quem domina o tema transforma em serviço novo.</p>
+    </div>
+
+    <div class="grid grid--3 opps">
+      <div class="opp"><span>01</span><p>Revisão e alteração de contrato social</p></div>
+      <div class="opp"><span>02</span><p>Revisão de cadastro de produtos e NCM</p></div>
+      <div class="opp"><span>03</span><p>Consultoria de reposicionamento tributário</p></div>
+      <div class="opp"><span>04</span><p>Revisão de créditos aproveitáveis</p></div>
+      <div class="opp"><span>05</span><p>Auditoria da declaração assistida</p></div>
+      <div class="opp"><span>06</span><p>Reprecificação da carteira do escritório</p></div>
+    </div>
+
+    <p class="opps__note">O cliente resolve isso agora e valoriza. No ano que vem, vira obrigação sua — sem cobrar a mais por isso.</p>
+  </div>
+</section>
+
+<!-- ========== QUEM ENSINA ========== -->
+<section class="section" id="celio">
+  <div class="container split">
+    <div class="split__media">
+      <div class="profile">
+        <!-- PENDENTE: substituir por foto do Célio (inclusive a da bola de cristal, se for usada) -->
+        <div class="profile__photo">CG</div>
+        <h3>Célio Gomes</h3>
+        <p class="profile__role">Contador · PPSE Contabilidade Digital</p>
+        <ul class="profile__facts">
+          <li><strong>1 ano</strong> estudando a reforma diariamente, desde agosto de 2025</li>
+          <li><strong>6h+</strong> de aula já produzidas e revisadas</li>
+          <li>Escritório próprio aplicando a reforma em clientes reais</li>
+          <li>Lives e conteúdos recorrentes para contadores</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="split__content">
+      <span class="eyebrow">Quem vai te ensinar</span>
+      <h2>“Encontrei um contador que está vivendo a reforma, não só lendo sobre ela.”</h2>
+      <p>
+        Célio começou a estudar a Reforma Tributária em agosto de 2025 — lendo a lei, montando racionais,
+        grifando artigo por artigo e testando cada conclusão dentro do próprio escritório.
+      </p>
+      <p>
+        Enquanto o mercado ainda discute teoria, ele já sentou com cliente de revenda de veículos, com
+        prestador de serviço e com comércio para decidir regime, crédito e cadastro. É essa vivência que
+        vira aula: sem juridiquês, com o artigo na tela e o caso do lado.
+      </p>
+      <p>
+        Recentemente, participou da reunião de uma contadora com o cliente dela. Cinco pessoas na chamada,
+        todas as perguntas dirigidas a ele. Não porque a contadora não estudou — mas porque ninguém avisou
+        a ela que o prazo já estava correndo.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== DEPOIMENTOS ========== -->
+<!-- PENDENTE: Célio enviará prints reais de clientes + autorização de uso.
+     NÃO publicar com estes placeholders. Substituir texto e autoria antes de ir ao ar. -->
+<section class="section section--alt" id="depoimentos" data-status="placeholder">
+  <div class="container">
+    <div class="section__head">
+      <span class="eyebrow">Quem já acompanha</span>
+      <h2>O que dizem os clientes e contadores que seguem o conteúdo</h2>
+      <p class="pending-note">⚠️ Área reservada para depoimentos reais — aguardando os prints e as autorizações.</p>
+    </div>
+
+    <div class="grid grid--3">
+      <article class="quote quote--empty">
+        <div class="stars">★★★★★</div>
+        <p>[Depoimento pendente — print de cliente sobre o valor das informações recebidas sobre a nova legislação.]</p>
+        <div class="quote__author"><span class="avatar">—</span><div><strong>Nome do cliente</strong><small>Empresa · cidade</small></div></div>
+      </article>
+      <article class="quote quote--empty">
+        <div class="stars">★★★★★</div>
+        <p>[Depoimento pendente — print de contador que participou das lives anteriores.]</p>
+        <div class="quote__author"><span class="avatar">—</span><div><strong>Nome do contador</strong><small>Escritório · cidade</small></div></div>
+      </article>
+      <article class="quote quote--empty">
+        <div class="stars">★★★★★</div>
+        <p>[Depoimento pendente — print sobre atendimento a cliente com apoio do Célio.]</p>
+        <div class="quote__author"><span class="avatar">—</span><div><strong>Nome</strong><small>Cargo · empresa</small></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== INSCRIÇÃO ========== -->
+<section class="cta" id="inscricao">
+  <div class="container cta__inner">
+    <div class="cta__content">
+      <span class="eyebrow eyebrow--accent">Inscrição gratuita</span>
+      <h2>Garanta sua vaga na aula ao vivo</h2>
+      <p>Vaga gratuita e nominal. Você recebe o link de acesso e o lembrete no WhatsApp antes de começar.</p>
+      <ul class="cta__list">
+        <li>Aula ao vivo, sem custo</li>
+        <li>Link enviado por e-mail e WhatsApp</li>
+        <li>Lembrete 1 hora antes do início</li>
+      </ul>
+      <p class="cta__meta" id="ctaWhen">27 de agosto · 19h (Brasília)</p>
+    </div>
+
+    <form class="form" id="form" novalidate>
+      <!-- PENDENTE: plugar endpoint real (webhook/CRM) em js/main.js -->
+      <div class="field field--full">
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" placeholder="Como devemos te chamar" required>
+      </div>
+      <div class="field field--full">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="voce@escritorio.com.br" required>
+      </div>
+      <div class="field field--full">
+        <label for="tel">WhatsApp</label>
+        <input type="tel" id="tel" name="tel" placeholder="(11) 99999-0000" required>
+      </div>
+      <div class="field field--full">
+        <label for="perfil">Seu perfil</label>
+        <select id="perfil" name="perfil" required>
+          <option value="">Selecione</option>
+          <option>Contador com escritório próprio</option>
+          <option>Contador empregado / sócio</option>
+          <option>Equipe de departamento fiscal</option>
+          <option>Técnico em contabilidade</option>
+          <option>Estudante de contabilidade</option>
+          <option>Empresário / outro</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn--accent btn--block btn--lg">Quero minha vaga gratuita</button>
+      <p class="form__note">Seus dados são usados só para o envio do acesso e lembretes, conforme a LGPD.</p>
+      <p class="form__ok" id="formOk" hidden>Inscrição confirmada! O link chega no seu e-mail e no WhatsApp.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ========== FAQ ========== -->
+<section class="section" id="faq">
+  <div class="container split split--faq">
+    <div class="split__content">
+      <span class="eyebrow">Dúvidas</span>
+      <h2>Perguntas frequentes</h2>
+      <p>Ficou alguma dúvida sobre a aula? Chama no WhatsApp.</p>
+      <a href="https://wa.me/5511999990000" class="btn btn--outline" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      <!-- PENDENTE: número oficial de WhatsApp -->
+    </div>
+
+    <div class="faq">
+      <details class="faq__item" open>
+        <summary>A aula é realmente gratuita?</summary>
+        <p>Sim. A aula ao vivo é gratuita e aberta a contadores de todo o Brasil. Basta se inscrever para receber o link de acesso.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Preciso já entender de Reforma Tributária?</summary>
+        <p>Não. A aula foi montada justamente para quem ainda não parou para estudar o tema. Começamos do zero e vamos até a aplicação prática.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Vai ter gravação?</summary>
+        <p>A proposta é ao vivo, com espaço para pergunta. Confirme na inscrição — quem estiver inscrito recebe qualquer aviso sobre replay por e-mail.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Sou de outro estado. Faz diferença?</summary>
+        <p>Nenhuma. CBS e IBS são a mesma regra para o país inteiro. A aula é online e atende contadores de todo o Brasil.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Serve para quem não é contador?</summary>
+        <p>O conteúdo é desenhado para contadores e equipes fiscais. Empresários interessados no tema podem participar, mas o recorte é técnico.</p>
+      </details>
+      <details class="faq__item">
+        <summary>Por que aprender com um contador e não com um advogado?</summary>
+        <p>Advogado explica a lei. Aqui você vê como aplicar a lei na rotina: lançamento, cadastro, crédito, obrigação acessória e conversa com o cliente.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a href="#hero" class="logo logo--light">
+        <img src="img/logo-ppse.jpg" alt="PPSE Contabilidade Digital" class="logo__img">
+      </a>
+      <p>A Reforma Tributária explicada por quem aplica a lei dentro do escritório todo dia — e não só lê sobre ela.</p>
+      <!-- PENDENTE: CNPJ / CRC / endereço oficiais -->
+    </div>
+
+    <div>
+      <h4>A aula</h4>
+      <ul>
+        <li><a href="#cenario">O cenário</a></li>
+        <li><a href="#live">O que será ensinado</a></li>
+        <li><a href="#casos">Casos reais</a></li>
+        <li><a href="#inscricao">Inscrição gratuita</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Sobre</h4>
+      <ul>
+        <li><a href="#celio">Quem ensina</a></li>
+        <li><a href="#faq">Dúvidas</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://ppse.com.br" target="_blank" rel="noopener">ppse.com.br</a></li>
+        <li><a href="https://wa.me/5511999990000" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="mailto:contato@ppse.com.br">contato@ppse.com.br</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <span>© <span id="year">2026</span> PPSE Contabilidade Digital. Todos os direitos reservados.</span>
+    <span><a href="#">Política de Privacidade</a> · <a href="#">Termos de Uso</a></span>
+  </div>
+</footer>
+
+<!-- STICKY CTA MOBILE -->
+<div class="sticky-cta" id="stickyCta">
+  <div>
+    <strong>Aula gratuita · 27/ago</strong>
+    <span id="stickyWhen">19h · online e ao vivo</span>
+  </div>
+  <a href="#inscricao" class="btn btn--accent">Garantir vaga</a>
+</div>
+
+<a href="https://wa.me/5511999990000" class="wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.5 14.1c-.2.6-1.2 1.2-1.7 1.2-.4 0-1 .1-3-.8-2.5-1.1-4.1-3.7-4.2-3.9-.1-.2-1-1.3-1-2.5s.6-1.8.9-2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.2.1.4.1.5-.1l.7-.9c.2-.2.3-.2.5-.1l2 .9c.2.1.4.2.4.3.1.2.1.7-.1 1.3z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
