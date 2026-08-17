@@ -33,6 +33,11 @@ Em `js/main.js`, no topo do arquivo:
 
 Cores da marca ficam em `css/style.css`, no bloco `:root`.
 
+## Deploy
+
+GitHub Pages, a partir da branch `main`. O arquivo `.nojekyll` na raiz desliga o
+processamento do Jekyll — o site é estático e deve ser servido exatamente como está.
+
 ## Pendências antes de publicar
 
 - [ ] Depoimentos reais + autorização de uso (seção está com placeholders explícitos)
