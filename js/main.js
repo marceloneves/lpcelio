@@ -3,6 +3,7 @@
    ============================================================ */
 const LIVE_AT = '2026-08-27T19:00:00-03:00'; // PENDENTE: confirmar com Brian
 const LEAD_ENDPOINT = '';                    // PENDENTE: URL do webhook/CRM
+const CHECKOUT_URL  = '';                    // PENDENTE: link de pagamento da aula (R$ 17)
 
 /* ============ HEADER STICKY ============ */
 const header = document.getElementById('header');
@@ -145,6 +146,12 @@ form.addEventListener('submit', async event => {
 
   formOk.hidden = false;
   form.reset();
+
+  if (CHECKOUT_URL) {
+    window.location.href = CHECKOUT_URL;
+    return;
+  }
+
   setTimeout(() => { formOk.hidden = true; }, 7000);
 });
 
