@@ -10,7 +10,7 @@ HTML + CSS + JavaScript vanilla. Sem build, sem dependências.
 ```
 index.html        # página completa
 css/style.css     # design tokens + estilos
-js/main.js        # countdown, máscara de telefone, formulário, menu mobile
+js/main.js        # countdown, vídeo do hero, máscara de telefone, formulário, menu mobile
 img/logo-ppse.jpg # logotipo oficial
 ```
 
@@ -40,4 +40,3 @@ Cores da marca ficam em `css/style.css`, no bloco `:root`.
 - [ ] Endpoint do formulário de inscrição
 - [ ] Link de checkout dos R$ 17 (`CHECKOUT_URL`)
 - [ ] WhatsApp, e-mail, CNPJ e CRC oficiais
-- [ ] Vídeo de apresentação do Célio no topo

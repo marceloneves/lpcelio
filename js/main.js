@@ -85,6 +85,77 @@ const tickCountdown = () => {
 tickCountdown();
 const countdownTimer = setInterval(tickCountdown, 1000);
 
+/* ============ VÍDEO DO HERO (autoplay mudo + botão de som) ============ */
+const videoPlay = document.getElementById('videoPlay');
+
+if (videoPlay) {
+  const videoId = videoPlay.dataset.yt;
+  const videoTitle = 'Célio Gomes explica por que esta aula existe';
+
+  const buildSrc = muted => {
+    const params = new URLSearchParams({
+      autoplay: '1',
+      mute: muted ? '1' : '0',
+      rel: '0',
+      modestbranding: '1',
+      playsinline: '1',
+      enablejsapi: '1'
+    });
+    if (location.protocol.startsWith('http')) params.set('origin', location.origin);
+    return `https://www.youtube-nocookie.com/embed/${videoId}?${params}`;
+  };
+
+  const mountPlayer = ({ muted }) => {
+    const frame = document.createElement('div');
+    frame.className = 'video-card__frame';
+
+    const iframe = document.createElement('iframe');
+    iframe.src = buildSrc(muted);
+    iframe.title = videoTitle;
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+    frame.appendChild(iframe);
+
+    // Botão de som: o autoplay só é permitido mudo, então o áudio depende de um clique.
+    if (muted) {
+      const sound = document.createElement('button');
+      sound.type = 'button';
+      sound.className = 'video-card__sound';
+      sound.innerHTML = '<span class="video-card__sound-icon" aria-hidden="true"></span> Clique para ativar o som';
+
+      sound.addEventListener('click', () => {
+        ['unMute', 'playVideo'].forEach(func => {
+          iframe.contentWindow.postMessage(
+            JSON.stringify({ event: 'command', func, args: [] }),
+            'https://www.youtube-nocookie.com'
+          );
+        });
+        sound.remove();
+      });
+
+      frame.appendChild(sound);
+    }
+
+    videoPlay.replaceWith(frame);
+    return frame;
+  };
+
+  // Clique na capa antes do player montar = som ligado direto (é um gesto do usuário).
+  videoPlay.addEventListener('click', () => mountPlayer({ muted: false }));
+
+  // Autoplay mudo assim que o vídeo entra na tela (evita carregar fora de vista).
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      if (!entries.some(entry => entry.isIntersecting)) return;
+      obs.disconnect();
+      if (videoPlay.isConnected) mountPlayer({ muted: true });
+    }, { threshold: 0.35 });
+    observer.observe(videoPlay);
+  } else {
+    mountPlayer({ muted: true });
+  }
+}
+
 /* ============ FAQ: ACCORDION EXCLUSIVO ============ */
 const faqItems = document.querySelectorAll('.faq__item');
 faqItems.forEach(item => {
