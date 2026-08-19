@@ -2,8 +2,6 @@
    CONFIG — ajustar quando a data/hora forem confirmadas
    ============================================================ */
 const LIVE_AT = '2026-08-27T19:00:00-03:00'; // PENDENTE: confirmar com Brian
-const LEAD_ENDPOINT = '';                    // PENDENTE: URL do webhook/CRM
-const CHECKOUT_URL  = '';                    // PENDENTE: link de pagamento da aula (R$ 17)
 
 /* ============ HEADER STICKY ============ */
 const header = document.getElementById('header');
@@ -163,67 +161,6 @@ faqItems.forEach(item => {
     if (!item.open) return;
     faqItems.forEach(other => { if (other !== item) other.open = false; });
   });
-});
-
-/* ============ MÁSCARA DE TELEFONE ============ */
-const phone = document.getElementById('tel');
-phone.addEventListener('input', () => {
-  const digits = phone.value.replace(/\D/g, '').slice(0, 11);
-
-  if (digits.length <= 2) {
-    phone.value = digits ? `(${digits}` : '';
-    return;
-  }
-
-  const rest = digits.slice(2);
-  const split = digits.length > 10 ? 5 : 4;
-  let masked = `(${digits.slice(0, 2)}) ${rest.slice(0, split)}`;
-  if (rest.length > split) masked += `-${rest.slice(split)}`;
-  phone.value = masked;
-});
-
-/* ============ FORMULÁRIO DE INSCRIÇÃO ============ */
-const form = document.getElementById('form');
-const formOk = document.getElementById('formOk');
-
-form.addEventListener('submit', async event => {
-  event.preventDefault();
-
-  let valid = true;
-  form.querySelectorAll('[required]').forEach(field => {
-    const ok = field.checkValidity() && field.value.trim() !== '';
-    field.classList.toggle('is-error', !ok);
-    if (!ok && valid) field.focus();
-    valid = valid && ok;
-  });
-
-  if (!valid) return;
-
-  const payload = Object.fromEntries(new FormData(form).entries());
-
-  if (LEAD_ENDPOINT) {
-    try {
-      await fetch(LEAD_ENDPOINT, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-    } catch (error) {
-      console.error('Falha ao enviar inscrição:', error);
-    }
-  } else {
-    console.info('LEAD_ENDPOINT não configurado. Payload:', payload);
-  }
-
-  formOk.hidden = false;
-  form.reset();
-
-  if (CHECKOUT_URL) {
-    window.location.href = CHECKOUT_URL;
-    return;
-  }
-
-  setTimeout(() => { formOk.hidden = true; }, 7000);
 });
 
 /* ============ ANO NO RODAPÉ ============ */
